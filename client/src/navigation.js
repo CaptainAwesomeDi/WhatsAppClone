@@ -14,6 +14,9 @@ import {
 import {Text, View,StyleSheet} from 'react-native';
 import {connect} from 'react-redux';
 
+import Groups from './screens/group.screen';
+import Messages from './screens/messages.screen';
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -41,7 +44,7 @@ const TestScreen = title => () => (
 
 // tabs in main screen
 const MainScreenNavigator = TabNavigator({
-  Chats: {screen: TestScreen('Chats')},
+  Chats: {screen: Groups },
   Settings: {screen: TestScreen('Settings')}
 },{
   initialRouteName: 'Chats',
@@ -49,6 +52,9 @@ const MainScreenNavigator = TabNavigator({
 
 const AppNavigator = createStackNavigator({
   Main: {screen: MainScreenNavigator},
+  Messages: {screen: Messages},
+},{
+    mode: 'modal',
 });
 
 //reducer inititalization code

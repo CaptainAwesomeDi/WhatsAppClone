@@ -1,12 +1,14 @@
 import express from 'express';
 import { graphqlExpress, graphiqlExpress } from 'apollo-server-express';
-import { makeExecutableSchema, addMockFunctionsToSchema } from 'graphql-tools';
+import { makeExecutableSchema,
+	//addMockFunctionsToSchema
+} from 'graphql-tools';
 import bodyParser from 'body-parser';
 import { createServer } from 'http';
 
 import { Resolvers } from './data/resolvers';
 import { Schema } from './data/schema';
-import { Mocks } from './data/mock';
+//import { Mocks } from './data/mock';
 
 
 const GRAPHQL_PORT = 8080;
