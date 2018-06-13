@@ -10,6 +10,13 @@ type Group {
   messages: [Message] # messages sent to the group
 }
 
+type Mutation {
+  # send a message to a group
+  createMessage(
+    text:String!, userId: Int!, groupId: Int!
+  ):Message
+}
+
 # a user
 type User {
  id: Int!
@@ -43,6 +50,7 @@ type Query {
 
   schema {
     query: Query
+    mutation: Mutation
   }
 `];
 

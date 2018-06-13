@@ -130,7 +130,6 @@ Groups.propTypes = {
   navigation: PropTypes.shape({
     navigate: PropTypes.func,
   }),
-  data: {
     loading: PropTypes.bool,
     user: PropTypes.shape({
       id: PropTypes.number.isRequired,
@@ -142,7 +141,6 @@ Groups.propTypes = {
         }),
       ),
     }),
-  }
 };
 
 export default userQuery(Groups);
